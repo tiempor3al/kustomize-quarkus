@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quarkus-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quarkus-app
+  template:
+    metadata:
+      labels:
+        app: quarkus-app
+    spec:
+      containers:
+      - name: quarkus-app
+        image: tiempor3al/quarkus-app:latest # Replace with your DockerHub image
+        ports:
+        - containerPort: 8080
