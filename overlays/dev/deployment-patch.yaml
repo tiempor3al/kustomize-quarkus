@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: quarkus-app
 spec:
-  replicas: 1 # Increase the number of replicas for production
+  replicas: 2
